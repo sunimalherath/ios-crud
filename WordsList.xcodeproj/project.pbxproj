@@ -13,6 +13,9 @@
 		A2565A0A29E28CCD0096F54B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2565A0929E28CCD0096F54B /* Preview Assets.xcassets */; };
 		A2565A1229E28D000096F54B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2565A1129E28D000096F54B /* HomeView.swift */; };
 		A2565A1429E28D110096F54B /* WordsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2565A1329E28D110096F54B /* WordsListView.swift */; };
+		A2565A1729E2BBE30096F54B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2565A1629E2BBE30096F54B /* CoreDataManager.swift */; };
+		A2565A1E29E2BDA20096F54B /* WordListModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2565A1C29E2BDA20096F54B /* WordListModel.xcdatamodeld */; };
+		A2565A2029E2C04F0096F54B /* WordListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2565A1F29E2C04F0096F54B /* WordListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		A2565A0929E28CCD0096F54B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A2565A1129E28D000096F54B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A2565A1329E28D110096F54B /* WordsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsListView.swift; sourceTree = "<group>"; };
+		A2565A1629E2BBE30096F54B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		A2565A1D29E2BDA20096F54B /* WordListModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WordListModel.xcdatamodel; sourceTree = "<group>"; };
+		A2565A1F29E2C04F0096F54B /* WordListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +61,14 @@
 		A2565A0129E28CC90096F54B /* WordsList */ = {
 			isa = PBXGroup;
 			children = (
-				A2565A1029E28CEF0096F54B /* Views */,
+				A2565A1A29E2BD560096F54B /* Model */,
+				A2565A1029E28CEF0096F54B /* View */,
+				A2565A1B29E2BD830096F54B /* ViewModel */,
 				A2565A0229E28CC90096F54B /* WordsListApp.swift */,
 				A2565A0429E28CC90096F54B /* ContentView.swift */,
 				A2565A0629E28CCD0096F54B /* Assets.xcassets */,
 				A2565A0829E28CCD0096F54B /* Preview Content */,
+				A2565A1629E2BBE30096F54B /* CoreDataManager.swift */,
 			);
 			path = WordsList;
 			sourceTree = "<group>";
@@ -72,13 +81,29 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		A2565A1029E28CEF0096F54B /* Views */ = {
+		A2565A1029E28CEF0096F54B /* View */ = {
 			isa = PBXGroup;
 			children = (
 				A2565A1129E28D000096F54B /* HomeView.swift */,
 				A2565A1329E28D110096F54B /* WordsListView.swift */,
 			);
-			path = Views;
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2565A1A29E2BD560096F54B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2565A1C29E2BDA20096F54B /* WordListModel.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A2565A1B29E2BD830096F54B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A2565A1F29E2C04F0096F54B /* WordListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +177,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2565A1429E28D110096F54B /* WordsListView.swift in Sources */,
+				A2565A1E29E2BDA20096F54B /* WordListModel.xcdatamodeld in Sources */,
 				A2565A1229E28D000096F54B /* HomeView.swift in Sources */,
 				A2565A0529E28CC90096F54B /* ContentView.swift in Sources */,
+				A2565A2029E2C04F0096F54B /* WordListViewModel.swift in Sources */,
+				A2565A1729E2BBE30096F54B /* CoreDataManager.swift in Sources */,
 				A2565A0329E28CC90096F54B /* WordsListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +383,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A2565A1C29E2BDA20096F54B /* WordListModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A2565A1D29E2BDA20096F54B /* WordListModel.xcdatamodel */,
+			);
+			currentVersion = A2565A1D29E2BDA20096F54B /* WordListModel.xcdatamodel */;
+			path = WordListModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A25659F729E28CC90096F54B /* Project object */;
 }

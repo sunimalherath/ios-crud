@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct WordsListView: View {
+    @StateObject private var wordListVM = WordListViewModel()
+    
     var body: some View {
-        Text("Words")
+        List(wordListVM.words, id: \.id) { word in
+            Text(word.title)
+        }
+        .onAppear {
+            wordListVM.getAllWords()
+        }
     }
 }
 
